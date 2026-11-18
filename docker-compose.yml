@@ -1,0 +1,57 @@
+version: "3.9"
+
+services:
+  # PostgreSQL database
+  db:
+    image: postgres:16-alpine
+    container_name: kisanai_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: kisanai
+      POSTGRES_PASSWORD: kisanai_password
+      POSTGRES_DB: kisanai_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - kisanai_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kisanai -d kisanai_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: kisanai_backend
+    restart: unless-stopped
+    env_file: ./backend/.env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://kisanai:kisanai_password@db:5432/kisanai_db
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - kisanai_uploads:/app/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  # React frontend (production build served by nginx)
+  frontend:
+    image: nginx:alpine
+    container_name: kisanai_frontend
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+    volumes:
+      - ./frontend/dist:/usr/share/nginx/html:ro
+    depends_on:
+      - backend
+
+volumes:
+  kisanai_pgdata:
+  kisanai_uploads:

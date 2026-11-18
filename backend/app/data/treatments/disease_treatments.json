@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "disclaimer": "All treatment information is for reference only. Always follow official product labels and consult a qualified agricultural officer before applying any treatment.",
+  "treatments": [
+    {
+      "disease_model_label": "Tomato___Early_blight",
+      "category": "cultural",
+      "description": "Remove and destroy infected leaves and plant debris. Practice crop rotation (avoid Solanaceae family for 2-3 seasons). Maintain adequate plant spacing. Mulch soil to prevent rain splash. Use drip irrigation instead of overhead watering. Avoid working in fields when leaves are wet.",
+      "source": "ICAR Plant Disease Management"
+    },
+    {
+      "disease_model_label": "Tomato___Early_blight",
+      "category": "biological",
+      "description": "Apply Trichoderma-based biocontrol agents as per product label. Neem-based formulations may help reduce severity as supplementary measures. Consult your local KVK for locally appropriate options.",
+      "source": "ICAR Biocontrol Guidelines"
+    },
+    {
+      "disease_model_label": "Tomato___Late_blight",
+      "category": "cultural",
+      "description": "Plant certified disease-free seed/transplants. Remove and destroy infected plant material immediately. Improve field drainage. Avoid overhead irrigation. Maintain adequate spacing. Do not compost infected material.",
+      "source": "ICAR Plant Disease Management"
+    },
+    {
+      "disease_model_label": "Tomato___Leaf_Mold",
+      "category": "cultural",
+      "description": "Reduce relative humidity below 85%. Improve greenhouse ventilation. Avoid overhead watering. Remove and destroy infected leaves. Space plants adequately for airflow.",
+      "source": "ICAR Plant Disease Management"
+    },
+    {
+      "disease_model_label": "Tomato___Bacterial_spot",
+      "category": "cultural",
+      "description": "Use certified disease-free seed. Avoid overhead irrigation. Practice crop rotation (2-3 year rotation away from Solanaceae). Remove and destroy infected plant material. Avoid working in fields when plants are wet.",
+      "source": "ICAR Plant Disease Management"
+    },
+    {
+      "disease_model_label": "Potato___Early_blight",
+      "category": "cultural",
+      "description": "Rotate crops — avoid planting potato or tomato in the same field for at least 2 seasons. Remove and destroy infected foliage. Maintain plant vigor through balanced nutrition. Avoid overhead irrigation. Harvest mature tubers promptly.",
+      "source": "ICAR Plant Disease Management"
+    },
+    {
+      "disease_model_label": "Potato___Late_blight",
+      "category": "cultural",
+      "description": "Plant certified disease-free seed tubers. Use resistant varieties where available. Improve field drainage. Remove and destroy infected plants immediately — do not leave in field. Avoid overhead irrigation. Harvest before symptoms spread to tubers.",
+      "source": "ICAR Plant Disease Management"
+    },
+    {
+      "disease_model_label": "Corn_(maize)___Northern_Leaf_Blight",
+      "category": "cultural",
+      "description": "Use resistant hybrids. Rotate crops — do not plant maize in same field consecutively. Manage crop residue — till or bury previous season residue. Avoid planting in poorly drained low-lying areas.",
+      "source": "ICAR Plant Disease Management"
+    },
+    {
+      "disease_model_label": "Grape___Black_rot",
+      "category": "cultural",
+      "description": "Remove mummified berries and infected canes during dormant pruning. Improve canopy management for better airflow. Avoid overhead irrigation. Remove and destroy fallen infected material. Use trellising to keep fruit off ground.",
+      "source": "ICAR Horticulture Disease Management"
+    }
+  ]
+}

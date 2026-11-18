@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+ENV/
+
+# SQLite database (don't commit DB file)
+backend/kisanai.db
+backend/kisanai.db-shm
+backend/kisanai.db-wal
+
+# Uploaded images
+backend/uploads/
+
+# Environment variables (secrets)
+backend/.env
+.env
+.env.local
+.env.production
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Logs
+*.log
+logs/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V*
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ML models (large files — download separately)
+backend/app/ml/saved_models/*.h5
+backend/app/ml/saved_models/*.pt
+backend/app/ml/saved_models/*.onnx
+*.h5
+*.pt
+*.onnx
+
+# Torch/HuggingFace cache
+~/.cache/huggingface/
+~/.cache/torch/
