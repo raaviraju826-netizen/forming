@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+// In production (Vercel): use relative /api — rewrites route to backend
+// In development: VITE_API_URL can override, defaults to relative path (vite proxy handles it)
+const API_BASE = import.meta.env.VITE_API_URL || ''
 
 export const api = axios.create({
   baseURL: `${API_BASE}/api`,
